@@ -11,13 +11,19 @@ url = 'https://trends.google.com/trends/api/dailytrends'
 print('GoogleTrends 日趋势排行 请求开始')
 
 
+def get_date():
+    _result = time.strftime("%Y%m%d", time.localtime(time.time() - 86400))
+    return _result
+
+
 def get_trends():
     global count
     params = {
         "hl": 'zh-CN',
         'tz': -480,
         'geo': countries[count],
-        'ns': 15
+        'ns': 15,
+		'ed': get_date()
     }
     print('\n***************  ', countriesCN[count], '  ***************\n')
     resp = requests.get(url, params)

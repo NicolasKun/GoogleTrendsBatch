@@ -1,17 +1,14 @@
 @echo off
 title GoogleTrend
-echo --切换目录
+echo --锟叫伙拷目录
 cd /d E:\Dev\Py\GoogleTrendsBatch
 echo.
-echo --进入虚拟环境
+echo --锟斤拷锟斤拷锟斤拷锟解环锟斤拷
 call neco\Scripts\activate
 echo.
-echo --开始执行脚本
+echo --锟斤拷始执锟叫脚憋拷
 call python trends.py
 echo.
-echo --退出虚拟环境
-call neco\Scripts\deactivate.bat
-echo.
-echo --脚本执行结束
+echo --锟脚憋拷执锟叫斤拷锟斤拷
 echo.
 pause
